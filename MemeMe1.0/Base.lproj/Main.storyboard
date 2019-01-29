@@ -18,38 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sT2-hh-59N">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtP-D0-vmn">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Pick" id="WaW-cG-53L">
+                                    <barButtonItem title="Pick" id="HEj-2B-qMh">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="hPq-gE-k3V"/>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="Bfv-78-7H1"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="9Gx-ml-Ksb">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZHB-MS-aOn">
-                                            <rect key="frame" x="59.5" y="7" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Cam"/>
-                                            <connections>
-                                                <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dia-GA-hev"/>
-                                            </connections>
-                                        </button>
+                                    <barButtonItem systemItem="camera" id="GVc-Ta-HIc">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="Sfd-xD-vGB"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lY5-tK-olx">
-                                <rect key="frame" x="16" y="40" width="343" height="528"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Joj-US-8vr">
+                                <rect key="frame" x="20" y="40" width="335" height="322"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Joj-US-8vr" secondAttribute="trailing" constant="20" id="5r0-Wr-YLY"/>
+                            <constraint firstItem="Joj-US-8vr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="BUQ-zM-1K6"/>
+                            <constraint firstItem="Joj-US-8vr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gpr-HQ-c51"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gri-5U-ych"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ion-4n-k5P"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hp6-kn-Z7H"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="top" secondItem="Joj-US-8vr" secondAttribute="bottom" constant="261" id="kL8-sI-INT"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="top" secondItem="Joj-US-8vr" secondAttribute="bottom" constant="261" id="mgd-ve-Ae3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cameraPickerButton" destination="ZHB-MS-aOn" id="iJY-fN-S6S"/>
-                        <outlet property="imagePickerView" destination="lY5-tK-olx" id="5lD-no-I6w"/>
+                        <outlet property="cameraPickerButton" destination="GVc-Ta-HIc" id="Frk-LM-siL"/>
+                        <outlet property="imagePickerView" destination="Joj-US-8vr" id="dNB-B5-ajy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

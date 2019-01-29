@@ -12,7 +12,8 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
-    @IBOutlet weak var cameraPickerButton: UIButton!
+    @IBOutlet weak var cameraPickerButton: UIBarButtonItem!
+//    @IBOutlet weak var cameraBtn: UIBarButtonItem!
     
     
     
@@ -37,7 +38,7 @@ UINavigationControllerDelegate {
         
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
