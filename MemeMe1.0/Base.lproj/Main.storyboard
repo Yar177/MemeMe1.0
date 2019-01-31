@@ -18,6 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Joj-US-8vr">
+                                <rect key="frame" x="16" y="36" width="343" height="571"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Buttom" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYB-F1-zAc">
+                                <rect key="frame" x="16" y="577" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtP-D0-vmn">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
@@ -33,26 +42,36 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Joj-US-8vr">
-                                <rect key="frame" x="20" y="40" width="335" height="322"/>
-                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFe-QP-evF">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Joj-US-8vr" secondAttribute="trailing" constant="20" id="5r0-Wr-YLY"/>
-                            <constraint firstItem="Joj-US-8vr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="BUQ-zM-1K6"/>
-                            <constraint firstItem="Joj-US-8vr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gpr-HQ-c51"/>
-                            <constraint firstItem="HtP-D0-vmn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gri-5U-ych"/>
-                            <constraint firstItem="HtP-D0-vmn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ion-4n-k5P"/>
-                            <constraint firstItem="HtP-D0-vmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hp6-kn-Z7H"/>
-                            <constraint firstItem="HtP-D0-vmn" firstAttribute="top" secondItem="Joj-US-8vr" secondAttribute="bottom" constant="261" id="kL8-sI-INT"/>
-                            <constraint firstItem="HtP-D0-vmn" firstAttribute="top" secondItem="Joj-US-8vr" secondAttribute="bottom" constant="261" id="mgd-ve-Ae3"/>
+                            <constraint firstItem="Joj-US-8vr" firstAttribute="width" secondItem="aFe-QP-evF" secondAttribute="width" id="1Xd-bO-Fg1"/>
+                            <constraint firstItem="Joj-US-8vr" firstAttribute="bottom" secondItem="tYB-F1-zAc" secondAttribute="bottom" id="5iw-4b-tfc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tYB-F1-zAc" secondAttribute="trailing" constant="16" id="Fpw-Dr-wbu"/>
+                            <constraint firstItem="tYB-F1-zAc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JPT-uk-zOf"/>
+                            <constraint firstItem="Joj-US-8vr" firstAttribute="top" secondItem="aFe-QP-evF" secondAttribute="top" id="JgQ-kw-ABE"/>
+                            <constraint firstItem="aFe-QP-evF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="998" constant="16" id="Khd-FI-bmx"/>
+                            <constraint firstItem="Joj-US-8vr" firstAttribute="centerX" secondItem="aFe-QP-evF" secondAttribute="centerX" id="PWI-Nb-QSK"/>
+                            <constraint firstItem="aFe-QP-evF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VuN-za-Lvc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aFe-QP-evF" secondAttribute="trailing" constant="16" id="iHT-d5-PMr"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kLw-hx-ru9"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="top" secondItem="tYB-F1-zAc" secondAttribute="bottom" constant="16" id="lcB-Yc-yHS"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t2n-Rk-Lqc"/>
+                            <constraint firstItem="HtP-D0-vmn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u7P-VI-8gR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttomTextField" destination="tYB-F1-zAc" id="Jza-G0-keJ"/>
                         <outlet property="cameraPickerButton" destination="GVc-Ta-HIc" id="Frk-LM-siL"/>
                         <outlet property="imagePickerView" destination="Joj-US-8vr" id="dNB-B5-ajy"/>
+                        <outlet property="topTextField" destination="aFe-QP-evF" id="UEh-Oo-eTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

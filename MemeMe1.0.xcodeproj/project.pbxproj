@@ -13,6 +13,7 @@
 		758DFAC221FF93FD000A9D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758DFAC121FF93FD000A9D6E /* Assets.xcassets */; };
 		758DFAC521FF93FD000A9D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758DFAC321FF93FD000A9D6E /* LaunchScreen.storyboard */; };
 		758DFAD021FF93FF000A9D6E /* MemeMe1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DFACF21FF93FF000A9D6E /* MemeMe1_0Tests.swift */; };
+		758DFADC2200B48E000A9D6E /* EmojiTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DFADB2200B48E000A9D6E /* EmojiTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		758DFACB21FF93FF000A9D6E /* MemeMe1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMe1.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		758DFACF21FF93FF000A9D6E /* MemeMe1_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe1_0Tests.swift; sourceTree = "<group>"; };
 		758DFAD121FF93FF000A9D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		758DFADB2200B48E000A9D6E /* EmojiTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		758DFAB921FF93E6000A9D6E /* MemeMe1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				758DFADA2200B408000A9D6E /* Delegates */,
 				758DFABA21FF93E6000A9D6E /* AppDelegate.swift */,
 				758DFABC21FF93E6000A9D6E /* ViewController.swift */,
 				758DFABE21FF93E6000A9D6E /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				758DFAD121FF93FF000A9D6E /* Info.plist */,
 			);
 			path = MemeMe1.0Tests;
+			sourceTree = "<group>";
+		};
+		758DFADA2200B408000A9D6E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				758DFADB2200B48E000A9D6E /* EmojiTextFieldDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			files = (
 				758DFABD21FF93E6000A9D6E /* ViewController.swift in Sources */,
 				758DFABB21FF93E6000A9D6E /* AppDelegate.swift in Sources */,
+				758DFADC2200B48E000A9D6E /* EmojiTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

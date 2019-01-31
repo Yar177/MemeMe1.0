@@ -13,14 +13,18 @@ UINavigationControllerDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraPickerButton: UIBarButtonItem!
-//    @IBOutlet weak var cameraBtn: UIBarButtonItem!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var buttomTextField: UITextField!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraPickerButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        // Do any additional setup after loading the view, typically from a nib.
+        topTextField.text = "Click to set Top Text"
+        buttomTextField.text = "Click to set Buttom Text"
+        
+        
     }
 
 
