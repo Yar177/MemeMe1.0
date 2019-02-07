@@ -177,7 +177,9 @@ UINavigationControllerDelegate {
     
     
     @IBAction func cancel(_ sender: Any) {
-        
+        imagePickerView.image = nil
+        topTextField.text = "Top"
+        buttomTextField.text = "Bottom"
     }
     
 
