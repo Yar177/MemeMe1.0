@@ -26,9 +26,8 @@
       "scale" : "2x"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "LaunchImage.png",
+      "size" : "40x40",
       "scale" : "3x"
     },
     {
@@ -37,15 +36,13 @@
       "scale" : "2x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "MemeGenerator_120 copy.png",
+      "size" : "60x60",
       "scale" : "3x"
     },
     {
-      "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "MemeGenerator_180 copy.png",
+      "size" : "1024x1024",
       "scale" : "1x"
     }
   ],
