@@ -61,7 +61,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="m33-L2-BNa"/>
-                                    <barButtonItem style="plain" systemItem="cancel" id="Vv3-uX-wqr" userLabel="Cancel"/>
+                                    <barButtonItem style="plain" systemItem="cancel" id="Vv3-uX-wqr" userLabel="Cancel">
+                                        <connections>
+                                            <action selector="cancel:" destination="BYZ-38-t0r" id="1c3-QC-hQ2"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

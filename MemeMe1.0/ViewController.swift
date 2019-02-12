@@ -108,16 +108,11 @@ UINavigationControllerDelegate {
 
 
     @IBAction func pickAnImage(_ sender: Any) {
-        
-        
         openImagePicker(.photoLibrary)
-        
     }
     
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        
-   
         openImagePicker(.camera)
     }
     
@@ -135,14 +130,26 @@ UINavigationControllerDelegate {
     
     @IBAction func shareMeme(_ sender: Any) {
         //save()
+        
         let image = save()
         
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        
         present(controller, animated: true, completion: nil)
         
         
+//        controller.completionWithItemsHandler = {(controller, completed, items, error) in
+//            if (completed){
+//                image = self.save()
+//            }
+//
+//            //Dismiss the shareActivityViewController
+//            self.dismiss(animated: true, completion: nil)
+//        }
+        
+        
     }
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         if let image = info[.originalImage] as? UIImage {
@@ -168,16 +175,14 @@ UINavigationControllerDelegate {
     
     func generateMemeImage() -> UIImage{
         
-        topToolbar.isHidden = true
-        bottomToolbar.isHidden = true
+        hideToolbars(true)
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        topToolbar.isHidden = false
-        bottomToolbar.isHidden = false
+        hideToolbars(false)
         
         return memedImage
         
@@ -196,6 +201,16 @@ UINavigationControllerDelegate {
         textField.delegate = textFieldDeleget
         textField.defaultTextAttributes = textAttributes
         textField.textAlignment = .center
+        
+        
+    }
+    
+    
+    
+    func hideToolbars(_ hide: Bool) {
+        
+        topToolbar.isHidden = hide ? true : false
+        bottomToolbar.isHidden = hide ? true : false
         
         
     }
