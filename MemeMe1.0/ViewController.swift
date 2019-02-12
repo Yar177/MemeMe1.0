@@ -136,17 +136,6 @@ UINavigationControllerDelegate {
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(controller, animated: true, completion: nil)
         
-        
-//        controller.completionWithItemsHandler = {(controller, completed, items, error) in
-//            if (completed){
-//                image = self.save()
-//            }
-//
-//            //Dismiss the shareActivityViewController
-//            self.dismiss(animated: true, completion: nil)
-//        }
-        
-        
     }
     
     
