@@ -46,14 +46,12 @@ UINavigationControllerDelegate {
         cameraPickerButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         shareButton.isEnabled = false
         
-        self.topTextField.delegate = textFieldDeleget
-        self.buttomTextField.delegate = textFieldDeleget
-        topTextField.defaultTextAttributes = textAttributes
-        buttomTextField.defaultTextAttributes = textAttributes
         topTextField.text = "TOP"
         buttomTextField.text = "Bottom"
-        topTextField.textAlignment = .center
-        buttomTextField.textAlignment = .center
+        
+        
+        setStyle(toTextField: topTextField)
+        setStyle(toTextField: buttomTextField)
         
         
     }
@@ -184,6 +182,15 @@ UINavigationControllerDelegate {
         buttomTextField.text = "Bottom"
     }
     
+    
+    func setStyle(toTextField textField: UITextField) {
+        
+        textField.delegate = textFieldDeleget
+        textField.defaultTextAttributes = textAttributes
+        textField.textAlignment = .center
+        
+        
+    }
 
 }
 
