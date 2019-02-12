@@ -52,6 +52,8 @@ UINavigationControllerDelegate {
         buttomTextField.defaultTextAttributes = textAttributes
         topTextField.text = "TOP"
         buttomTextField.text = "Bottom"
+        topTextField.textAlignment = .center
+        buttomTextField.textAlignment = .center
         
         
     }

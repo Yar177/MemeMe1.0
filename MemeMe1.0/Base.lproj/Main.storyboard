@@ -22,13 +22,13 @@
                                 <rect key="frame" x="0.0" y="48" width="375" height="591"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFe-QP-evF">
-                                <rect key="frame" x="169.5" y="114" width="36" height="23"/>
+                                <rect key="frame" x="16" y="114" width="343" height="23"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" tag="131" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Buttom" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYB-F1-zAc" userLabel="Bottom Text Field">
-                                <rect key="frame" x="154" y="550" width="67" height="23"/>
+                                <rect key="frame" x="16" y="550" width="343" height="23"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -61,17 +61,16 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="m33-L2-BNa"/>
-                                    <barButtonItem style="plain" systemItem="cancel" id="Vv3-uX-wqr" userLabel="Cancel">
-                                        <connections>
-                                            <action selector="cancel:" destination="BYZ-38-t0r" id="wIb-MW-Bxl"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="cancel" id="Vv3-uX-wqr" userLabel="Cancel"/>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aFe-QP-evF" secondAttribute="trailing" constant="16" id="0O5-ju-CGY"/>
                             <constraint firstItem="YSO-5o-mES" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CqB-QO-K2D"/>
+                            <constraint firstItem="aFe-QP-evF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DtU-yO-B6D"/>
+                            <constraint firstItem="tYB-F1-zAc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IvK-MU-2Mg"/>
                             <constraint firstItem="Joj-US-8vr" firstAttribute="top" secondItem="YSO-5o-mES" secondAttribute="bottom" constant="-16" id="NYE-s3-aQ0"/>
                             <constraint firstItem="YSO-5o-mES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NqK-qq-lfw"/>
                             <constraint firstItem="YSO-5o-mES" firstAttribute="bottom" secondItem="aFe-QP-evF" secondAttribute="top" constant="-50" id="PHl-KG-WHD"/>
@@ -83,6 +82,7 @@
                             <constraint firstItem="YSO-5o-mES" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lmQ-ki-3Fy"/>
                             <constraint firstItem="aFe-QP-evF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ucv-08-IXf"/>
                             <constraint firstItem="Joj-US-8vr" firstAttribute="bottom" secondItem="HtP-D0-vmn" secondAttribute="top" constant="16" id="x0v-kx-Ibe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tYB-F1-zAc" secondAttribute="trailing" constant="16" id="xK2-Lu-Uv6"/>
                             <constraint firstItem="HtP-D0-vmn" firstAttribute="top" secondItem="tYB-F1-zAc" secondAttribute="bottom" constant="50" id="zfa-Gx-AbZ"/>
                             <constraint firstItem="tYB-F1-zAc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ztX-LT-ejx"/>
                         </constraints>
