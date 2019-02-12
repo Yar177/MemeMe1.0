@@ -109,21 +109,29 @@ UINavigationControllerDelegate {
 
     @IBAction func pickAnImage(_ sender: Any) {
         
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
-        present(pickerController, animated: true, completion: nil)
+        
+        openImagePicker(.photoLibrary)
         
     }
     
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
         
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
+   
+        openImagePicker(.camera)
     }
+    
+    
+    
+    func openImagePicker(_ type: UIImagePickerController.SourceType){
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = type
+        present(pickerController, animated: true, completion: nil)
+    }
+    
+    
+    
     
     @IBAction func shareMeme(_ sender: Any) {
         //save()
