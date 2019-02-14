@@ -131,10 +131,22 @@ UINavigationControllerDelegate {
     @IBAction func shareMeme(_ sender: Any) {
         //save()
         
-        let image = save()
+        let image = generateMemeImage()
         
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(controller, animated: true, completion: nil)
+        
+        
+        controller.completionWithItemsHandler = {(activity, completed, items, error) in
+            if (completed){
+                self.save(image: image)
+            }
+            
+            //Dismiss the shareActivityViewController
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        
         
     }
     
@@ -154,9 +166,9 @@ UINavigationControllerDelegate {
     
     
     
-    func save() -> UIImage{
+    func save(image: UIImage) -> UIImage{
         // Create the meme
-        let meme = Meme(topText: topTextField.text!, bottomText: buttomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemeImage())
+        let meme = Meme(topText: topTextField.text!, bottomText: buttomTextField.text!, originalImage: imagePickerView.image!, memedImage: image)
         
         //imagePickerView.image = meme.memedImage
         return meme.memedImage
