@@ -194,6 +194,7 @@ UINavigationControllerDelegate {
         imagePickerView.image = nil
         topTextField.text = "Top"
         buttomTextField.text = "Bottom"
+        shareButton.isEnabled = false
     }
     
     
