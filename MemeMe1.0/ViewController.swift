@@ -16,7 +16,6 @@ UINavigationControllerDelegate {
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var buttomTextField: UITextField!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    
     @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var bottomToolbar: UIToolbar!
     
@@ -35,7 +34,6 @@ UINavigationControllerDelegate {
     let textAttributes:[NSAttributedString.Key: Any] = [
         NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeColor.rawValue): UIColor.black,
         NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white,
-        
         NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): -4.0]
     
@@ -45,14 +43,10 @@ UINavigationControllerDelegate {
         super.viewDidLoad()
         cameraPickerButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         shareButton.isEnabled = false
-        
         topTextField.text = "TOP"
         buttomTextField.text = "Bottom"
-        
-        
         setStyle(toTextField: topTextField)
         setStyle(toTextField: buttomTextField)
-        
         
     }
     
@@ -87,7 +81,6 @@ UINavigationControllerDelegate {
     func getKeyboardHeight(_ notification: Notification) -> CGFloat{
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
-        
         return keyboardSize.cgRectValue.height
     }
     
@@ -102,8 +95,6 @@ UINavigationControllerDelegate {
     func unsubscribeFromKeyoardNotifications(){
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-            
-            //.removeObserver((self, name: .UIKeyboardwillShow, object: nil))
     }
 
 
@@ -129,27 +120,17 @@ UINavigationControllerDelegate {
     
     
     @IBAction func shareMeme(_ sender: Any) {
-        //save()
-        
         let image = generateMemeImage()
-        
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(controller, animated: true, completion: nil)
-        
-        
         controller.completionWithItemsHandler = {(activity, completed, items, error) in
             if (completed){
                 self.save(image: image)
             }
-            
             //Dismiss the shareActivityViewController
             self.dismiss(animated: true, completion: nil)
         }
-        
-        
-        
     }
-    
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
@@ -169,24 +150,17 @@ UINavigationControllerDelegate {
     func save(image: UIImage) -> UIImage{
         // Create the meme
         let meme = Meme(topText: topTextField.text!, bottomText: buttomTextField.text!, originalImage: imagePickerView.image!, memedImage: image)
-        
-        //imagePickerView.image = meme.memedImage
         return meme.memedImage
     }
     
     func generateMemeImage() -> UIImage{
-        
         hideToolbars(true)
-        
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        
         hideToolbars(false)
-        
         return memedImage
-        
     }
     
     
@@ -199,22 +173,16 @@ UINavigationControllerDelegate {
     
     
     func setStyle(toTextField textField: UITextField) {
-        
         textField.delegate = textFieldDeleget
         textField.defaultTextAttributes = textAttributes
         textField.textAlignment = .center
-        
-        
-    }
+            }
     
     
     
     func hideToolbars(_ hide: Bool) {
-        
         topToolbar.isHidden = hide ? true : false
-        bottomToolbar.isHidden = hide ? true : false
-        
-        
+        bottomToolbar.isHidden = hide ? true : false        
     }
 
 }
