@@ -182,7 +182,9 @@ UINavigationControllerDelegate {
     
     func hideToolbars(_ hide: Bool) {
         topToolbar.isHidden = hide ? true : false
-        bottomToolbar.isHidden = hide ? true : false        
+        bottomToolbar.isHidden = hide ? true : false
+        
+        
     }
 
 }
